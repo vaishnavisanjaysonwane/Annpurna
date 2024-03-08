@@ -1,6 +1,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Tiro+Devanagari+Marathi:ital@0;1&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .row{
   font-family: "Cinzel", serif;
   font-optical-sizing: auto;
@@ -116,7 +122,7 @@ overflow-x: hidden;
     color: rgb(23, 52, 52);
 }
 
-@media (min-width: 10em) and (max-width: 70em) {
+@media (min-width: 10em) and (max-width: 100em) {
     
     .navbar-nav .nav-item{
     font-size: 2vh;
