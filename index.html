@@ -194,15 +194,15 @@
                       style="color: burlywood; font-weight: 500"
                       >Message:</label
                     >
-                    <textarea class="form-control" id="message-text"></textarea>
+                    <textarea class="form-control" id="message-text" ></textarea>
                   </div>
                 </form>
               </div>
               <div class="modal-footer">
-                <button type="button" class="yes-btn" data-bs-dismiss="modal">
+                <button type="button" class="yes-btn" data-bs-dismiss="modal" id="btn">
                   Close
                 </button>
-                <button type="button" class="yes-btn">submit</button>
+                <button type="button" class="yes-btn" data-bs-toggle="modal" id="btn">submit</button>
               </div>
             </div>
           </div>
@@ -348,7 +348,23 @@
 <!-- End of .container -->
     <!-- Footer end -->
 
+    <script>
+      const btn = document.getElementById('btn');
 
+      btn.addEventListener('click', function handleClick(event) {
+      // 👇️ if you are submitting a form (prevents page reload)
+      event.preventDefault();
+
+       const firstNameInput = document.getElementById('message-text');
+
+      // Send value to server
+       console.log(firstNameInput.value);
+
+      // 👇️ clear input field
+       firstNameInput.value = '';
+    });
+
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
